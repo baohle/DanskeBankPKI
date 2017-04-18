@@ -40,6 +40,7 @@ module MobilePay
         end
 
         debug 'SOAP Response', @response
+        puts "#{response}"
         response_handler.verify!(@response, customer_id, request_builder.request_id)
         verify_response!
       end
